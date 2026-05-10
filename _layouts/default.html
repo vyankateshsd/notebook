@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href='{{ "/assets/css/style.css" | relativeurl }}'>
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css"'>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     {% if page.pagetitle %}
     <title>{{ page.pagetitle }}</title>
@@ -18,10 +18,10 @@
             <h3>{{ site.title }}</h3>
             <nav>
                 <span>
-                    | <a href='{{ "/" | relativeurl }}'>Home</a>
+                    | <a href="/{{ site.baseurl }}/">Home</a>
                 </span>
                 <span>
-                    <!-- | <a href='{{ "/" | relativeurl }}/'>Index</a> -->
+                    <!-- | <a href="/{{ site.baseurl }}/index/">Index</a> -->
                 </span>
                 <span>
                     | <a href="https://github.com/{{ site.author.github }}" target="_blank">GitHub Profile</a>
