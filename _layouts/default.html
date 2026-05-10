@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    <link rel="stylesheet" href='{{ "/assets/css/style.css" | relativeurl }}'>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     {% if page.pagetitle %}
     <title>{{ page.pagetitle }}</title>
@@ -17,21 +17,12 @@
         <header>
             <h3>{{ site.title }}</h3>
             <nav>
-                {% if jekyll.environment == "development" %}
                 <span>
-                    | <a href="/">Home</a> 
+                    | <a href='{{ "/" | relativeurl }}'>Home</a>
                 </span>
                 <span>
-                    <!-- | <a href="/">Index</a> -->
+                    <!-- | <a href='{{ "/" | relativeurl }}/'>Index</a> -->
                 </span>
-                {% else %}
-                <span>
-                    | <a href="{{ site.baseurl }}/">Home</a>
-                </span>
-                <span>
-                    <!-- | <a href="{{ site.baseurl }}/">Index</a> -->
-                </span> |
-                {% endif %}
                 <span>
                     | <a href="https://github.com/{{ site.author.github }}" target="_blank">GitHub Profile</a>
                 </span>

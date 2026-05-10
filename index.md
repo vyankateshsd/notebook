@@ -13,7 +13,7 @@ This is a sort of digital notebook for me to store technical notes about various
 
 {% for pg in notes %}
 
-> [**{{ pg.nid }} - {{ pg.title }}**]({{ pg.url }})\
+> [**{{ pg.nid }} - {{ pg.title }}**]({{ pg.url | relativeurl }})\
   {{ pg.description }}\
   *{{ pg.date }}*
 
