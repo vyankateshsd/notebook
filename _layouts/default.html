@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    {% if page.pagetitle %}
+    <title>{{ page.pagetitle }}</title>
+    {% else %}
+    <title>{{ page.title }} | {{ site.title }}</title>
+    {% endif %}
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h3>{{ site.title }}</h3>
+            <nav>
+                {% if jekyll.environment == "development" %}
+                <span>
+                    | <a href="/">Home</a> 
+                </span>
+                <span>
+                    <!-- | <a href="/">Index</a> -->
+                </span>
+                {% else %}
+                <span>
+                    | <a href="{{ site.baseurl }}/">Home</a>
+                </span>
+                <span>
+                    <!-- | <a href="{{ site.baseurl }}/">Index</a> -->
+                </span> |
+                {% endif %}
+                <span>
+                    | <a href="https://github.com/{{ site.author.github }}" target="_blank">GitHub Profile</a>
+                </span>
+                <span>
+                    | <a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank">LinkedIn Profile</a>
+                </span>
+                <span>
+                    | <a href="mailto:{{ site.author.email }}">Email</a>
+                </span>
+            </nav>
+        </header>
+        <main>
+            {{ content }}
+        </main>
+        <hr>
+        <footer>
+            <p>notebook started in May 2026. <br>
+            Built with Jekyll and hosted on GitHub Pages.</p>
+        </footer>
+    </div>
+</body>
+
+</html>

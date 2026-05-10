@@ -1,0 +1,23 @@
+title: "notebook"
+description: "a digital notebook"
+
+site:
+  baseurl: "/notebook"
+
+author:
+  name: "Vyankatesh S Dande"
+  email: "vyankateshdande.vd@gmail.com"
+  github: "vyankateshsd"
+  linkedin: "vyankateshsdande"
+
+plugins:
+  - jekyll-toc
+
+defaults:
+  - 
+    scope:
+      path: "notes"
+      type: "pages"
+    values:
+      layout: "note"
+      category: "note"
